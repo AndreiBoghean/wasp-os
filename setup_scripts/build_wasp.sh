@@ -1,11 +1,8 @@
 #! /bin/bash
 #! /bin/bash -v
 
-echo "CD-ing to $(dirname $0)/../"
-cd $(dirname $0)/../
-
-wasp_dir="$(pwd)/$(find -name "wasp-os" | head -1)"
-wasp_libs="$(pwd)/$(find -name "wasp_libs" | head -1)" # head -1 needed because of unexplained dir copying wierdness.
+wasp_dir="$(dirname $(readlink -f $0))/.."
+wasp_libs="$wasp_dir/wasp_libs"
 
 echo "$wasp_dir"
 echo "$wasp_libs"

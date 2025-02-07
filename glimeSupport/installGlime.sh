@@ -9,9 +9,8 @@ git clone git@github.com:AndreiBoghean/glime.git
 wasp=$1
 glime=$2
 
-# assumes we're running from inside wasp-os/glimeSupport/installGlime.sh
-if [ -f $wasp ]; then wasp="../"; fi
-if [ -f $glime ]; then glime="glime"; fi
+if [ -f $wasp ]; then infi="$(dirname $(readlink -f $0))/.."; fi
+if [ -f $glime ]; then git clone git@github.com:AndreiBoghean/glime.git; glime=$wasp/glimeSupport/glime; fi
 
 wasp=$(readlink $wasp -f)
 glime=$(readlink $glime -f)
