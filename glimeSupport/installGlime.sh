@@ -4,13 +4,11 @@
 # (1) wasp-os directory
 # (2) glime repo download location.
 
-git clone git@github.com:AndreiBoghean/glime.git
-
 wasp=$1
 glime=$2
 
 if [ -f $wasp ]; then infi="$(dirname $(readlink -f $0))/.."; fi
-if [ -f $glime ]; then git clone git@github.com:AndreiBoghean/glime.git; glime=$wasp/glimeSupport/glime; fi
+if [ -f $glime ]; then glime=$wasp/glimeSupport/glime; git clone git@github.com:AndreiBoghean/glime.git $glime; fi
 
 wasp=$(readlink $wasp -f)
 glime=$(readlink $glime -f)
