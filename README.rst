@@ -21,9 +21,7 @@ in detail
 | in addition to this, this fork also provides some convenience scripts for installation on the presumption that potential users have no prior experience this codebase.  
 | ``setup_scripts/setupOSrepositories.sh`` takes no arguments, and simply downloads the 2020 q4 major gcc arm compiler for linux x86-64 into a wasp_libs folder in the repo root.
 | 
-| ``setup_scripts/build_infinitime.sh`` takes 2 **optional positional** arguments
-| 1. either "quick" or anything else; specifies whether to do a full rebuild or just compile.
-| 2. either "emu" or anything else; specifies whether to build for infiniemu and run it.
+| ``setup_scripts/build_infinitime.sh`` also takes no argmuments, and simply finds the wasp_libs folder, adds it to $PATH, and cleanbuilds the operating system.
 
 
 existing readme.md from wasp-os
