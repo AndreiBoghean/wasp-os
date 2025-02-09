@@ -2,17 +2,18 @@ glime support stuff
 ------------------
 **quickstart guide:**
 
+0. run ``setup_scripts/installPackages.sh`` (disclaimer: uses sudo for pacman; also script is designed for arch.)
 1. run ``glimeSupport/installGlime.sh``
-2. run ``setuptScripts/setupOSrepositories.sh``
-3. run ``setuptScripts/build_infinitime.sh``
+2. run ``setup_scripts/setupOSrepositories.sh``
+3. run ``setup_scripts/build_wasp.sh``
 
 in detail
 ---------
 | **glime install**
 | while this repository has been modified to expect the presence of glime, glime is not actually included in this fork.  
 | to "install" it, you should run ``glimeSupport/installGlime.sh``, which takes 2 **optional positional** arguments  
-| 1. infinitime OS directory (defaults to repo root)
-| 2. glime repo location. (if not specified, clones glime to ``infinitime/glimeSupport/glime``)
+| 1. wasp-os directory (defaults to repo root)
+| 2. glime repo location. (if not specified, clones glime to ``wasp-os/glimeSupport/glime``)
 
    2.1 **this is what you should specify if you want to use your existing glime download**
 
@@ -21,7 +22,7 @@ in detail
 | in addition to this, this fork also provides some convenience scripts for installation on the presumption that potential users have no prior experience this codebase.  
 | ``setup_scripts/setupOSrepositories.sh`` takes no arguments, and simply downloads the 2020 q4 major gcc arm compiler for linux x86-64 into a wasp_libs folder in the repo root.
 | 
-| ``setup_scripts/build_infinitime.sh`` also takes no argmuments, and simply finds the wasp_libs folder, adds it to $PATH, and cleanbuilds the operating system.
+| ``setup_scripts/build_wasp.sh`` also takes no argmuments, and simply finds the wasp_libs folder, adds it to $PATH, and cleanbuilds the operating system.
 
 
 existing readme.md from wasp-os
