@@ -8,7 +8,7 @@ wasp=$1
 glime=$2
 
 if [ -f $wasp ]; then wasp="$(dirname $(readlink -f $0))/.."; fi
-if [ -f $glime ]; then glime=$wasp/glimeSupport/glime; git clone git@github.com:AndreiBoghean/glime.git $glime; fi
+if [ -f $glime ]; then glime=$wasp/glimeSupport/glime; git clone https://github.com/AndreiBoghean/glime.git $glime; fi
 
 wasp=$(readlink $wasp -f)
 glime=$(readlink $glime -f)
