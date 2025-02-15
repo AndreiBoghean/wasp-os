@@ -3,7 +3,7 @@ glime support stuff
 **quickstart guide:**
 
 0. run ``setup_scripts/installPackages.sh`` (disclaimer: uses sudo for pacman; also script is designed for arch.)
-1. run ``glimeSupport/installGlime.sh``
+1. run ``glimeSupport/installGlime.sh`` (note: if you've already downloaded glime, see detailed instructions below for how to use existing download.)
 2. run ``setup_scripts/setupOSrepositories.sh``
 3. run ``setup_scripts/build_wasp.sh``
 
@@ -23,7 +23,6 @@ in detail
 | ``setup_scripts/setupOSrepositories.sh`` takes no arguments, and simply downloads the 2020 q4 major gcc arm compiler for linux x86-64 into a wasp_libs folder in the repo root.
 | 
 | ``setup_scripts/build_wasp.sh`` also takes no argmuments, and simply finds the wasp_libs folder, adds it to $PATH, and cleanbuilds the operating system.
-
 
 existing readme.md from wasp-os
 ===============================
