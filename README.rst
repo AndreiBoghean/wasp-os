@@ -6,6 +6,7 @@ glime support stuff
 1. run ``glimeSupport/installGlime.sh`` (note: if you've already downloaded glime, see detailed instructions below for how to use existing download.)
 2. run ``setup_scripts/setupOSrepositories.sh``
 3. run ``setup_scripts/build_wasp.sh``
+4. your OS should now be built and present in `wasp-os/build-pinetime`, ready to flash.
 
 in detail
 ---------
