@@ -22,14 +22,14 @@ echo "glime: $glime"
 # the wrapper app calls the main() of the external app.
 ln -v -s $wasp/glimeSupport/wrapApp.py $wasp/apps/wrap.py
 
-mkdir -p $wasp/modules/crossApp
+mkdir -p $wasp/wasp/modules/crossApp
 
 # insert the compatability interface and wasp-os specific implementation as a C-implemented micropython module.
-ln -v -s $glime/compat.h $wasp/modules/crossApp/compat.h
-ln -v -s $wasp/glimeSupport/compat.py.cpp $wasp/modules/crossApp/compat.py.cpp
+ln -v -s $glime/compat.h $wasp/wasp/modules/crossApp/compat.h
+ln -v -s $wasp/glimeSupport/compat.py.c $wasp/wasp/modules/crossApp/compat.py.c
 # also insert the actual OS-agnostic external app
-ln -v -s $glime/externApp.h $wasp/modules/crossApp/externApp.h
-ln -v -s $glime/externApp.cpp $wasp/modules/crossApp/externApp.cpp
+ln -v -s $glime/externApp.h $wasp/wasp/modules/crossApp/externApp.h
+ln -v -s $glime/externApp.c $wasp/wasp/modules/crossApp/externApp.c
 # lastly add the module config files that define the bindings between C and micropython.
-ln -v -s $wasp/glimeSupport/internal_module/gateway.c $wasp/modules/crossApp/gateway.c
-ln -v -s $wasp/glimeSupport/internal_module/micropython.mk $wasp/modules/crossApp/micropython.mk
+ln -v -s $wasp/glimeSupport/internal_module/gateway.c $wasp/wasp/modules/crossApp/gateway.c
+ln -v -s $wasp/glimeSupport/internal_module/micropython.mk $wasp/wasp/modules/crossApp/micropython.mk
